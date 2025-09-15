@@ -1,0 +1,987 @@
+
+{
+  "departments": [
+    {
+      "id": "cse",
+      "name": "Computer Science & Engineering",
+      "head": {
+        "name": "Dr. Alan Turing",
+        "email": "alan.t@example.com"
+      }
+    },
+    {
+      "id": "ece",
+      "name": "Electronics & Communication",
+      "head": {
+        "name": "Dr. M. Malathi",
+        "email": "hodece@egspec.org"
+      }
+    },
+    {
+      "id": "mech",
+      "name": "Mechanical Engineering",
+      "head": {
+        "name": "Dr. James Watt",
+        "email": "james.w@example.com"
+      }
+    },
+    {
+      "id": "civil",
+      "name": "Civil Engineering",
+      "head": {
+        "name": "Dr. John Smeaton",
+        "email": "john.s@example.com"
+      }
+    },
+    {
+      "id": "aids",
+      "name": "Artificial Intelligence & Data Science",
+      "head": {
+        "name": "Dr. Geoffrey Hinton",
+        "email": "geoffrey.h@example.com"
+      }
+    },
+    {
+      "id": "eee",
+      "name": "Electrical & Electronics Engineering",
+      "head": {
+        "name": "Dr. Nikola Tesla",
+        "email": "nikola.t@example.com"
+      }
+    },
+    {
+      "id": "it",
+      "name": "Information Technology",
+      "head": {
+        "name": "Dr. Tim Berners-Lee",
+        "email": "tim.bl@example.com"
+      }
+    },
+    {
+      "id": "bme",
+      "name": "Biomedical Engineering",
+      "head": {
+        "name": "Dr. Rosalind Franklin",
+        "email": "rosalind.f@example.com"
+      }
+    },
+    {
+      "id": "csbs",
+      "name": "Computer Science & Business Systems",
+      "head": {
+        "name": "Dr. Peter Drucker",
+        "email": "peter.d@example.com"
+      }
+    },
+    {
+      "id": "be",
+      "name": "Bachelor's in Engineering",
+      "head": {
+        "name": "Dr. Vannevar Bush",
+        "email": "vannevar.b@example.com"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "user-1",
+      "name": "Alex Johnson",
+      "email": "alex.j@example.com",
+      "college": "Tech University",
+      "registeredAt": "2024-08-01T10:00:00Z",
+      "avatarUrl": "https://picsum.photos/seed/1/40/40"
+    },
+    {
+      "id": "user-2",
+      "name": "Maria Garcia",
+      "email": "maria.g@example.com",
+      "college": "State College",
+      "registeredAt": "2024-08-01T11:30:00Z",
+      "avatarUrl": "https://picsum.photos/seed/2/40/40"
+    },
+    {
+      "id": "user-3",
+      "name": "Chen Wei",
+      "email": "chen.w@example.com",
+      "college": "Innovation Institute",
+      "registeredAt": "2024-08-02T09:00:00Z",
+      "avatarUrl": "https://picsum.photos/seed/3/40/40"
+    },
+    {
+      "id": "user-4",
+      "name": "Fatima Al-Sayed",
+      "email": "fatima.a@example.com",
+      "college": "Global University",
+      "registeredAt": "2024-08-02T14:00:00Z",
+      "avatarUrl": "https://picsum.photos/seed/4/40/40"
+    },
+    {
+      "id": "user-5",
+      "name": "David Smith",
+      "email": "david.s@example.com",
+      "college": "Metro College",
+      "registeredAt": "2024-08-03T16:00:00Z",
+      "avatarUrl": "https://picsum.photos/seed/5/40/40"
+    },
+    {
+      "id": "user-6",
+      "name": "Yuki Tanaka",
+      "email": "yuki.t@example.com",
+      "college": "Tech University",
+      "registeredAt": "2024-08-04T10:00:00Z",
+      "avatarUrl": "https://picsum.photos/seed/6/40/40"
+    },
+    {
+      "id": "user-7",
+      "name": "Ben Carter",
+      "email": "ben.c@example.com",
+      "college": "State College",
+      "registeredAt": "2024-08-04T12:00:00Z",
+      "avatarUrl": "https://picsum.photos/seed/7/40/40"
+    },
+    {
+      "id": "user-8",
+      "name": "Olivia Martinez",
+      "email": "olivia.m@example.com",
+      "college": "Innovation Institute",
+      "registeredAt": "2024-08-05T09:30:00Z",
+      "avatarUrl": "https://picsum.photos/seed/8/40/40"
+    }
+  ],
+  "events": [
+    {
+      "id": "event-1",
+      "name": "Hackathon 2024",
+      "description": "A 24-hour coding competition to build innovative solutions.",
+      "date": "2024-09-15T09:00:00Z",
+      "department": {
+        "id": "cse",
+        "name": "Computer Science & Engineering",
+        "head": {
+          "name": "Dr. Alan Turing",
+          "email": "alan.t@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-1",
+          "name": "Alex Johnson",
+          "email": "alex.j@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-01T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/1/40/40"
+        },
+        {
+          "id": "user-2",
+          "name": "Maria Garcia",
+          "email": "maria.g@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-01T11:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/2/40/40"
+        },
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        },
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        },
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/tech/400/250",
+      "imageHint": "technology code",
+      "registrationFee": 10,
+      "mode": "offline",
+      "category": "technical"
+    },
+    {
+      "id": "event-2",
+      "name": "RoboWars",
+      "description": "Design and build robots to compete in an arena.",
+      "date": "2024-09-20T10:00:00Z",
+      "department": {
+        "id": "ece",
+        "name": "Electronics & Communication",
+        "head": {
+          "name": "Dr. M. Malathi",
+          "email": "hodece@egspec.org"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        },
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        },
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        },
+        {
+          "id": "user-7",
+          "name": "Ben Carter",
+          "email": "ben.c@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-04T12:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/7/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/robotics/400/250",
+      "imageHint": "robot battle",
+      "registrationFee": 15,
+      "mode": "online",
+      "category": "technical"
+    },
+    {
+      "id": "event-3",
+      "name": "Bridge Builders",
+      "description": "A competition to design and construct the strongest model bridge.",
+      "date": "2024-09-25T11:00:00Z",
+      "department": {
+        "id": "civil",
+        "name": "Civil Engineering",
+        "head": {
+          "name": "Dr. John Smeaton",
+          "email": "john.s@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        },
+        {
+          "id": "user-7",
+          "name": "Ben Carter",
+          "email": "ben.c@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-04T12:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/7/40/40"
+        },
+        {
+          "id": "user-8",
+          "name": "Olivia Martinez",
+          "email": "olivia.m@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-05T09:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/8/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/bridge/400/250",
+      "imageHint": "bridge construction",
+      "registrationFee": 0,
+      "mode": "offline",
+      "category": "non-technical"
+    },
+    {
+      "id": "event-4",
+      "name": "CAD Design Challenge",
+      "description": "Showcase your CAD skills by designing a complex mechanical part.",
+      "date": "2024-09-30T09:00:00Z",
+      "department": {
+        "id": "mech",
+        "name": "Mechanical Engineering",
+        "head": {
+          "name": "Dr. James Watt",
+          "email": "james.w@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-2",
+          "name": "Maria Garcia",
+          "email": "maria.g@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-01T11:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/2/40/40"
+        },
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        },
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/design/400/250",
+      "imageHint": "3d model",
+      "registrationFee": 8,
+      "mode": "online",
+      "category": "technical"
+    },
+    {
+      "id": "event-5",
+      "name": "AI Ethics Debate",
+      "description": "A panel discussion on the ethical implications of artificial intelligence.",
+      "date": "2024-10-05T14:00:00Z",
+      "department": {
+        "id": "aids",
+        "name": "Artificial Intelligence & Data Science",
+        "head": {
+          "name": "Dr. Geoffrey Hinton",
+          "email": "geoffrey.h@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-1",
+          "name": "Alex Johnson",
+          "email": "alex.j@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-01T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/1/40/40"
+        },
+        {
+          "id": "user-2",
+          "name": "Maria Garcia",
+          "email": "maria.g@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-01T11:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/2/40/40"
+        },
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/ai-ethics/400/250",
+      "imageHint": "AI debate",
+      "registrationFee": 0,
+      "mode": "online",
+      "category": "non-technical"
+    },
+    {
+      "id": "event-6",
+      "name": "Circuit Masters",
+      "description": "A hands-on workshop on advanced circuit design and simulation.",
+      "date": "2024-10-10T10:00:00Z",
+      "department": {
+        "id": "eee",
+        "name": "Electrical & Electronics Engineering",
+        "head": {
+          "name": "Dr. Nikola Tesla",
+          "email": "nikola.t@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        },
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        },
+        {
+          "id": "user-7",
+          "name": "Ben Carter",
+          "email": "ben.c@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-04T12:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/7/40/40"
+        },
+        {
+          "id": "user-8",
+          "name": "Olivia Martinez",
+          "email": "olivia.m@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-05T09:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/8/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/circuits/400/250",
+      "imageHint": "circuit board",
+      "registrationFee": 20,
+      "mode": "offline",
+      "category": "technical"
+    },
+    {
+      "id": "event-7",
+      "name": "Web Dev Bootcamp",
+      "description": "An intensive online bootcamp covering modern web development technologies.",
+      "date": "2024-10-12T09:00:00Z",
+      "department": {
+        "id": "it",
+        "name": "Information Technology",
+        "head": {
+          "name": "Dr. Tim Berners-Lee",
+          "email": "tim.bl@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-2",
+          "name": "Maria Garcia",
+          "email": "maria.g@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-01T11:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/2/40/40"
+        },
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        },
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        },
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/webdev/400/250",
+      "imageHint": "web development",
+      "registrationFee": 50,
+      "mode": "online",
+      "category": "technical"
+    },
+    {
+      "id": "event-8",
+      "name": "Bio-Signal Processing",
+      "description": "Explore the techniques used to analyze biological signals like ECG and EEG.",
+      "date": "2024-10-18T13:00:00Z",
+      "department": {
+        "id": "bme",
+        "name": "Biomedical Engineering",
+        "head": {
+          "name": "Dr. Rosalind Franklin",
+          "email": "rosalind.f@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        },
+        {
+          "id": "user-7",
+          "name": "Ben Carter",
+          "email": "ben.c@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-04T12:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/7/40/40"
+        },
+        {
+          "id": "user-8",
+          "name": "Olivia Martinez",
+          "email": "olivia.m@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-05T09:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/8/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/biosignal/400/250",
+      "imageHint": "medical tech",
+      "registrationFee": 12,
+      "mode": "offline",
+      "category": "technical"
+    },
+    {
+      "id": "event-9",
+      "name": "Startup Pitch Fest",
+      "description": "Pitch your business idea to a panel of investors and entrepreneurs.",
+      "date": "2024-10-22T15:00:00Z",
+      "department": {
+        "id": "csbs",
+        "name": "Computer Science & Business Systems",
+        "head": {
+          "name": "Dr. Peter Drucker",
+          "email": "peter.d@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-1",
+          "name": "Alex Johnson",
+          "email": "alex.j@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-01T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/1/40/40"
+        },
+        {
+          "id": "user-2",
+          "name": "Maria Garcia",
+          "email": "maria.g@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-01T11:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/2/40/40"
+        },
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        },
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        },
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/pitch/400/250",
+      "imageHint": "business pitch",
+      "registrationFee": 0,
+      "mode": "online",
+      "category": "non-technical"
+    },
+    {
+      "id": "event-10",
+      "name": "Engineering Expo",
+      "description": "A showcase of final year projects from all engineering disciplines.",
+      "date": "2024-10-25T10:00:00Z",
+      "department": {
+        "id": "be",
+        "name": "Bachelor's in Engineering",
+        "head": {
+          "name": "Dr. Vannevar Bush",
+          "email": "vannevar.b@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        },
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        },
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        },
+        {
+          "id": "user-7",
+          "name": "Ben Carter",
+          "email": "ben.c@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-04T12:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/7/40/40"
+        },
+        {
+          "id": "user-8",
+          "name": "Olivia Martinez",
+          "email": "olivia.m@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-05T09:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/8/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/expo/400/250",
+      "imageHint": "science fair",
+      "registrationFee": 0,
+      "mode": "offline",
+      "category": "non-technical"
+    },
+    {
+      "id": "event-11",
+      "name": "Data Science Summit",
+      "description": "A full-day online summit with talks from leading data scientists.",
+      "date": "2024-11-01T09:00:00Z",
+      "department": {
+        "id": "aids",
+        "name": "Artificial Intelligence & Data Science",
+        "head": {
+          "name": "Dr. Geoffrey Hinton",
+          "email": "geoffrey.h@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-2",
+          "name": "Maria Garcia",
+          "email": "maria.g@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-01T11:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/2/40/40"
+        },
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:0Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        },
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        },
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        },
+        {
+          "id": "user-7",
+          "name": "Ben Carter",
+          "email": "ben.c@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-04T12:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/7/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/datasci/400/250",
+      "imageHint": "data charts",
+      "registrationFee": 25,
+      "mode": "online",
+      "category": "technical"
+    },
+    {
+      "id": "event-12",
+      "name": "Sustainable Structures",
+      "description": "Design and build a model of an eco-friendly building.",
+      "date": "2024-11-05T11:00:00Z",
+      "department": {
+        "id": "civil",
+        "name": "Civil Engineering",
+        "head": {
+          "name": "Dr. John Smeaton",
+          "email": "john.s@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        },
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/green-build/400/250",
+      "imageHint": "sustainable architecture",
+      "registrationFee": 5,
+      "mode": "offline",
+      "category": "technical"
+    },
+    {
+      "id": "event-13",
+      "name": "Capture The Flag",
+      "description": "A cybersecurity competition focused on ethical hacking and defense.",
+      "date": "2024-11-10T09:00:00Z",
+      "department": {
+        "id": "cse",
+        "name": "Computer Science & Engineering",
+        "head": {
+          "name": "Dr. Alan Turing",
+          "email": "alan.t@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-1",
+          "name": "Alex Johnson",
+          "email": "alex.j@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-01T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/1/40/40"
+        },
+        {
+          "id": "user-2",
+          "name": "Maria Garcia",
+          "email": "maria.g@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-01T11:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/2/40/40"
+        },
+        {
+          "id": "user-3",
+          "name": "Chen Wei",
+          "email": "chen.w@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-02T09:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/3/40/40"
+        },
+        {
+          "id": "user-4",
+          "name": "Fatima Al-Sayed",
+          "email": "fatima.a@example.com",
+          "college": "Global University",
+          "registeredAt": "2024-08-02T14:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/4/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/cyber/400/250",
+      "imageHint": "cyber security",
+      "registrationFee": 10,
+      "mode": "online",
+      "category": "technical"
+    },
+    {
+      "id": "event-14",
+      "name": "Automotive Overhaul",
+      "description": "A workshop on modern vehicle maintenance and engine tuning.",
+      "date": "2024-11-15T10:00:00Z",
+      "department": {
+        "id": "mech",
+        "name": "Mechanical Engineering",
+        "head": {
+          "name": "Dr. James Watt",
+          "email": "james.w@example.com"
+        }
+      },
+      "participants": [
+        {
+          "id": "user-5",
+          "name": "David Smith",
+          "email": "david.s@example.com",
+          "college": "Metro College",
+          "registeredAt": "2024-08-03T16:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/5/40/40"
+        },
+        {
+          "id": "user-6",
+          "name": "Yuki Tanaka",
+          "email": "yuki.t@example.com",
+          "college": "Tech University",
+          "registeredAt": "2024-08-04T10:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/6/40/40"
+        },
+        {
+          "id": "user-7",
+          "name": "Ben Carter",
+          "email": "ben.c@example.com",
+          "college": "State College",
+          "registeredAt": "2024-08-04T12:00:00Z",
+          "avatarUrl": "https://picsum.photos/seed/7/40/40"
+        },
+        {
+          "id": "user-8",
+          "name": "Olivia Martinez",
+          "email": "olivia.m@example.com",
+          "college": "Innovation Institute",
+          "registeredAt": "2024-08-05T09:30:00Z",
+          "avatarUrl": "https://picsum.photos/seed/8/40/40"
+        }
+      ],
+      "imageUrl": "https://picsum.photos/seed/automotive/400/250",
+      "imageHint": "car engine",
+      "registrationFee": 30,
+      "mode": "offline",
+      "category": "technical"
+    }
+  ],
+  "winners": [
+    {
+      "id": "winner-1",
+      "eventId": "event-1",
+      "position": 1,
+      "user": {
+        "id": "user-3",
+        "name": "Chen Wei",
+        "email": "chen.w@example.com",
+        "college": "Innovation Institute",
+        "registeredAt": "2024-08-02T09:00:00Z",
+        "avatarUrl": "https://picsum.photos/seed/3/40/40"
+      },
+      "prizeAmount": 500
+    },
+    {
+      "id": "winner-2",
+      "eventId": "event-1",
+      "position": 2,
+      "user": {
+        "id": "user-1",
+        "name": "Alex Johnson",
+        "email": "alex.j@example.com",
+        "college": "Tech University",
+        "registeredAt": "2024-08-01T10:00:00Z",
+        "avatarUrl": "https://picsum.photos/seed/1/40/40"
+      },
+      "prizeAmount": 250
+    },
+    {
+      "id": "winner-3",
+      "eventId": "event-2",
+      "position": 1,
+      "user": {
+        "id": "user-7",
+        "name": "Ben Carter",
+        "email": "ben.c@example.com",
+        "college": "State College",
+        "registeredAt": "2024-08-04T12:00:00Z",
+        "avatarUrl": "https://picsum.photos/seed/7/40/40"
+      },
+      "prizeAmount": 750
+    }
+  ]
+}

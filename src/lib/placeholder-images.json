@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "user-avatar-1",
+      "description": "User avatar",
+      "imageUrl": "https://picsum.photos/seed/1/40/40",
+      "imageHint": "person"
+    },
+    {
+      "id": "event-image-1",
+      "description": "Image for tech fest event",
+      "imageUrl": "https://picsum.photos/seed/tech/400/250",
+      "imageHint": "technology code"
+    },
+    {
+      "id": "event-image-2",
+      "description": "Image for robotics event",
+      "imageUrl": "https://picsum.photos/seed/robotics/400/250",
+      "imageHint": "robot battle"
+    },
+    {
+      "id": "event-image-3",
+      "description": "Image for civil engineering event",
+      "imageUrl": "https://picsum.photos/seed/bridge/400/250",
+      "imageHint": "bridge construction"
+    },
+    {
+      "id": "event-image-4",
+      "description": "Image for design event",
+      "imageUrl": "https://picsum.photos/seed/design/400/250",
+      "imageHint": "3d model"
+    }
+  ]
+}
