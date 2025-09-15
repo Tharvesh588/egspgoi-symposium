@@ -22,6 +22,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Badge } from '@/components/ui/badge';
 import { events as allEvents } from '@/lib/data';
@@ -98,7 +99,6 @@ export default function HomePage() {
       <Card
         key={event.id}
         className="flex flex-col overflow-hidden h-full hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-        onClick={() => setSelectedEvent(event)}
       >
         <div className="relative h-48 w-full">
           <Image
@@ -285,7 +285,9 @@ export default function HomePage() {
                   {onlineEvents.slice(0, 5).map((event) => (
                   <CarouselItem key={event.id} className="md:basis-1/2 lg:basis-1/4">
                       <div className="p-1 h-full">
-                      <EventCard event={event} />
+                        <DialogTrigger asChild onClick={() => setSelectedEvent(event)}>
+                          <EventCard event={event} />
+                        </DialogTrigger>
                       </div>
                   </CarouselItem>
                   ))}
@@ -320,7 +322,9 @@ export default function HomePage() {
                   {offlineEvents.slice(0,5).map((event) => (
                   <CarouselItem key={event.id} className="md:basis-1/2 lg:basis-1/4">
                       <div className="p-1 h-full">
-                      <EventCard event={event} />
+                        <DialogTrigger asChild onClick={() => setSelectedEvent(event)}>
+                          <EventCard event={event} />
+                        </DialogTrigger>
                       </div>
                   </CarouselItem>
                   ))}
