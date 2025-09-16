@@ -51,15 +51,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import type { Department, LoggedInUser } from "@/lib/types";
-import { createDepartment, updateDepartment, deleteDepartment, getDepartments } from "./actions";
 import { useToast } from "@/hooks/use-toast";
+import { departments as initialDepartments } from "@/lib/data";
 
 
 export default function AdminDepartmentsPage() {
   const router = useRouter();
   const { toast } = useToast();
   const [user, setUser] = useState<LoggedInUser | null>(null);
-  const [departments, setDepartments] = useState<Department[]>([]);
+  const [departments, setDepartments] = useState<Department[]>(initialDepartments);
   const [isNewDepartmentDialogOpen, setIsNewDepartmentDialogOpen] = useState(false);
   const [editingDepartment, setEditingDepartment] = useState<Department | null>(null);
 
@@ -76,75 +76,64 @@ export default function AdminDepartmentsPage() {
         router.push('/auth/login');
     }
     
-    const fetchDepartments = async () => {
-        const fetchedDepartments = await getDepartments();
-        setDepartments(fetchedDepartments);
-    }
-    fetchDepartments();
   }, [router]);
 
-  const refreshDepartments = async () => {
-    const fetchedDepartments = await getDepartments();
-    setDepartments(fetchedDepartments);
-  }
-
-  const handleCreateDepartment = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleCreateDepartment = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    try {
-      await createDepartment(formData);
-      setIsNewDepartmentDialogOpen(false);
-      await refreshDepartments();
-       toast({
-        title: "Success",
-        description: "Department created successfully.",
-      });
-    } catch(error) {
-         toast({
+     const newDepartment: Department = {
+      id: formData.get("id") as string,
+      name: formData.get("name") as string,
+      head: {
+        name: formData.get("headName") as string,
+        email: formData.get("headEmail") as string,
+      }
+    };
+
+    if (departments.some(d => d.id === newDepartment.id)) {
+        toast({
             variant: "destructive",
             title: "Error",
-            description: (error as Error).message,
+            description: "Department ID already exists.",
         });
+        return;
     }
+
+    setDepartments([...departments, newDepartment]);
+    setIsNewDepartmentDialogOpen(false);
+    toast({
+      title: "Success",
+      description: "Department created successfully.",
+    });
   };
   
-  const handleUpdateDepartment = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleUpdateDepartment = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!editingDepartment) return;
     
     const formData = new FormData(event.currentTarget);
-    try {
-        await updateDepartment(editingDepartment.id, formData);
-        setEditingDepartment(null);
-        await refreshDepartments();
-        toast({
-            title: "Success",
-            description: "Department updated successfully.",
-        });
-    } catch(error) {
-        toast({
-            variant: "destructive",
-            title: "Error",
-            description: (error as Error).message,
-        });
-    }
+    const updatedDepartment: Department = {
+      ...editingDepartment,
+      name: formData.get("name") as string,
+      head: {
+        name: formData.get("headName") as string,
+        email: formData.get("headEmail") as string,
+      }
+    };
+    setDepartments(departments.map(d => d.id === updatedDepartment.id ? updatedDepartment : d));
+    setEditingDepartment(null);
+    toast({
+        title: "Success",
+        description: "Department updated successfully.",
+    });
   };
 
-  const handleDeleteDepartment = async (departmentId: string) => {
-    try {
-        await deleteDepartment(departmentId);
-        await refreshDepartments();
-         toast({
-            title: "Success",
-            description: "Department deleted successfully.",
-        });
-    } catch(error) {
-        toast({
-            variant: "destructive",
-            title: "Error",
-            description: (error as Error).message,
-        });
-    }
+  const handleDeleteDepartment = (departmentId: string) => {
+    setDepartments(departments.filter(d => d.id !== departmentId));
+     toast({
+        title: "Success",
+        description: "Department deleted successfully.",
+    });
   };
 
   if (user?.role !== 'superadmin') {
@@ -324,3 +313,5 @@ export default function AdminDepartmentsPage() {
     </>
   );
 }
+
+    
