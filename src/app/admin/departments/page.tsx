@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import {
   Card,
@@ -52,9 +52,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { departments as initialDepartments } from "@/lib/data";
 import type { Department, LoggedInUser } from "@/lib/types";
+import { useToast } from "@/hooks/use-toast";
+import { createDepartment, updateDepartment, deleteDepartment } from "./actions";
 
 export default function AdminDepartmentsPage() {
   const router = useRouter();
+  const { toast } = useToast();
+  const [isPending, startTransition] = useTransition();
+
   const [user, setUser] = useState<LoggedInUser | null>(null);
   const [departments, setDepartments] = useState<Department[]>(initialDepartments);
   const [isNewDepartmentDialogOpen, setIsNewDepartmentDialogOpen] = useState(false);
@@ -77,16 +82,27 @@ export default function AdminDepartmentsPage() {
   const handleCreateDepartment = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const newDepartment: Department = {
-      id: `dept-${Date.now()}`,
-      name: formData.get("name") as string,
-      head: {
-        name: formData.get("headName") as string,
-        email: formData.get("headEmail") as string,
-      }
-    };
-    setDepartments([...departments, newDepartment]);
-    setIsNewDepartmentDialogOpen(false);
+    
+    startTransition(async () => {
+        const result = await createDepartment(formData);
+        if (result.success) {
+            toast({ title: "Success", description: result.message });
+            // This would be where you'd re-fetch data in a real app
+            // For now, we'll manually update state
+             const newDepartment: Department = {
+                id: formData.get("id") as string,
+                name: formData.get("name") as string,
+                head: {
+                    name: formData.get("headName") as string,
+                    email: formData.get("headEmail") as string,
+                }
+            };
+            setDepartments(prev => [...prev, newDepartment]);
+            setIsNewDepartmentDialogOpen(false);
+        } else {
+            toast({ variant: "destructive", title: "Error", description: result.message });
+        }
+    });
   };
   
   const handleUpdateDepartment = (event: React.FormEvent<HTMLFormElement>) => {
@@ -94,20 +110,41 @@ export default function AdminDepartmentsPage() {
     if (!editingDepartment) return;
     
     const formData = new FormData(event.currentTarget);
-    const updatedDepartment: Department = {
-      ...editingDepartment,
-      name: formData.get("name") as string,
-      head: {
-        name: formData.get("headName") as string,
-        email: formData.get("headEmail") as string,
-      }
-    };
-    setDepartments(departments.map(d => d.id === updatedDepartment.id ? updatedDepartment : d));
-    setEditingDepartment(null);
+    formData.append('id', editingDepartment.id);
+
+    startTransition(async () => {
+        const result = await updateDepartment(formData);
+        if (result.success) {
+            toast({ title: "Success", description: result.message });
+            const updatedDepartment: Department = {
+              ...editingDepartment,
+              name: formData.get("name") as string,
+              head: {
+                name: formData.get("headName") as string,
+                email: formData.get("headEmail") as string,
+              }
+            };
+            setDepartments(departments.map(d => d.id === updatedDepartment.id ? updatedDepartment : d));
+            setEditingDepartment(null);
+        } else {
+            toast({ variant: "destructive", title: "Error", description: result.message });
+        }
+    });
   };
 
   const handleDeleteDepartment = (departmentId: string) => {
-    setDepartments(departments.filter(d => d.id !== departmentId));
+    const formData = new FormData();
+    formData.append('id', departmentId);
+
+    startTransition(async () => {
+        const result = await deleteDepartment(formData);
+        if (result.success) {
+            toast({ title: "Success", description: result.message });
+            setDepartments(departments.filter(d => d.id !== departmentId));
+        } else {
+            toast({ variant: "destructive", title: "Error", description: result.message });
+        }
+    });
   };
 
   if (user?.role !== 'superadmin') {
@@ -142,6 +179,12 @@ export default function AdminDepartmentsPage() {
             </DialogHeader>
             <form onSubmit={handleCreateDepartment}>
               <div className="grid gap-4 py-4">
+                 <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="id" className="text-right">
+                    Department ID
+                  </Label>
+                  <Input id="id" name="id" placeholder="e.g. cse" className="col-span-3" required />
+                </div>
                 <div className="grid grid-cols-4 items-center gap-4">
                   <Label htmlFor="name" className="text-right">
                     Department Name
@@ -165,7 +208,9 @@ export default function AdminDepartmentsPage() {
                 <DialogClose asChild>
                     <Button variant="outline">Cancel</Button>
                 </DialogClose>
-                <Button type="submit">Create</Button>
+                <Button type="submit" disabled={isPending}>
+                    {isPending ? 'Creating...' : 'Create'}
+                </Button>
               </DialogFooter>
             </form>
           </DialogContent>
@@ -273,7 +318,9 @@ export default function AdminDepartmentsPage() {
               </div>
               <DialogFooter>
                  <Button variant="outline" onClick={() => setEditingDepartment(null)}>Cancel</Button>
-                <Button type="submit">Save Changes</Button>
+                 <Button type="submit" disabled={isPending}>
+                    {isPending ? 'Saving...' : 'Save Changes'}
+                 </Button>
               </DialogFooter>
             </form>
           </DialogContent>
@@ -281,5 +328,3 @@ export default function AdminDepartmentsPage() {
     </>
   );
 }
-
-    

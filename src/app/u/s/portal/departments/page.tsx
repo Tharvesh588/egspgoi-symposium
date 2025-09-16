@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import {
   Card,
@@ -311,5 +311,3 @@ export default function AdminDepartmentsPage() {
     </>
   );
 }
-
-    
