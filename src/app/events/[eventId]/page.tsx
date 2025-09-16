@@ -29,6 +29,12 @@ import { notFound, useParams } from "next/navigation";
 import { Calendar, Users, Trophy, DollarSign, MapPin, Ticket } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
+export async function generateStaticParams() {
+  return events.map((event) => ({
+    eventId: event.id,
+  }));
+}
+
 export default function EventDetailPage() {
   const params = useParams();
   const eventId = params.eventId as string;
